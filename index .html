@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <title>Mon Blog</title>
+  </head>
+  <body>
+    <header>
+      <h1>Mon Blog</h1>
+      <nav>
+        <ul>
+          <li><a href="#articles">Articles</a></li>
+          <li><a href="#commentaires">Commentaires</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quos optio minima facere vero, quas illum sapiente eum doloribus quod repellat quo earum minus reiciendis, autem facilis laborum fuga asperiores?</p>
+      <section id="articles">
+        <h2>Articles</h2>
+        <div id="admin-section">
+            <h2>Publier un article</h2>
+            <form id="admin-article-form" method="post" action="submit-article.php" enctype="multipart/form-data">
+              <label for="title">Titre de l'article:</label>
+              <input type="text" id="title" name="title"><br>
+              <label for="content">Contenu de l'article:</label>
+              <textarea id="content" name="content"></textarea><br>
+              <label for="image">Sélectionnez une image:</label>
+              <input type="file" id="image" name="image"><br>
+              <input type="submit" value="Publier">
+            </form>
+            <div id="admin-articles">
+              <!-- Section pour afficher les articles publiés par l'administrateur -->
+            </div>
+          </div>
+          
+          <!-- Section pour les articles publiés par l'administrateur -->
+        </div>
+      </section>
+      <section id="commentaires">
+        <h2>Commentaires</h2>
+        <form>
+          <label for="nom">Nom:</label>
+          <input type="text" id="nom" name="nom"><br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email"><br>
+          <label for="commentaire">Commentaire:</label>
+          <textarea id="commentaire" name="commentaire"></textarea><br>
+          <input type="submit" value="Envoyer">
+        </form>
+        <div id="visitor-comments">
+          <!-- Section pour afficher les commentaires des visiteurs -->
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
